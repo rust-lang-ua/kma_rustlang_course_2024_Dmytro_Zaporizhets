@@ -1,16 +1,16 @@
 // move_semantics1.rs
 // Make me compile! Execute `rustlings hint move_semantics1` for hints :)
 
-// I AM NOT DONE
+// I AM DONE
 
 fn main() {
-    let vec0 = Vec::new();
+    let mut vec0 = Vec::new(); // Змінюємо vec0 на мутабельний
 
-    let vec1 = fill_vec(vec0);
+    let mut vec1 = fill_vec(vec0); // Змінюємо vec1 на мутабельний
 
     println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
 
-    vec1.push(88);
+    vec1.push(88); // Тепер можна додати 88 у vec1
 
     println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
 }
