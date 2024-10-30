@@ -4,10 +4,8 @@
 
 // I AM DONE
 
-use crate::my_macro;
-
+#[macro_use] // Bring macros from the `macros` module into scope
 mod macros {
-    #[macro_export] // Робимо макрос доступним для інших модулів
     macro_rules! my_macro {
         () => {
             println!("Check out my macro!");
@@ -16,5 +14,5 @@ mod macros {
 }
 
 fn main() {
-    my_macro!(); // Тепер макрос доступний у глобальному просторі
+    my_macro!(); // Now the macro is available in this scope
 }

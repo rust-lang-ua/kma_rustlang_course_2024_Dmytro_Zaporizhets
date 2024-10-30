@@ -14,9 +14,7 @@
 //
 // Note: the tests should not be changed
 //
-// Execute `rustlings hint box1` for hints :)
-
-// I AM NOT DONE
+// I AM DONE
 
 #[derive(PartialEq, Debug)]
 pub enum List {
@@ -54,4 +52,3 @@ mod tests {
         assert_ne!(create_empty_list(), create_non_empty_list())
     }
 }
-
